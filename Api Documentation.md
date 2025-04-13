@@ -35,11 +35,6 @@
 
 ---
 
----
-
-
----
-
 ##  What I'd Improve with More Time
 
 | Area | Improvement                                                                                                                          |
