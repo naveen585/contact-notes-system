@@ -70,6 +70,8 @@ Instructions to use the endpoints:
 - **Response**: `200 OK`  
   Returns success message or error if user exists.
 
+![Screenshot (567)](https://github.com/user-attachments/assets/002dc848-990b-4cea-8679-b4800830ca50)
+
 ---
 
 #### `POST /auth/login`
