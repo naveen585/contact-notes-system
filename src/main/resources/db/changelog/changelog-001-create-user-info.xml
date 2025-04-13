@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog 
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="001-create-users-table" author="naveen585">
+        <createTable tableName="user_info">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="created_at" type="timestamp"/>
+            <column name="updated_at" type="timestamp"/>
+            <column name="created_by" type="varchar(100)"/>
+            <column name="deleted_by" type="varchar(100)"/>
+            <column name="is_deleted" type="varchar(1)" defaultValue="N"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

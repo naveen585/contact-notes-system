@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+
+    <changeSet id="003-create-notes-table" author="naveen585">
+        <createTable tableName="notes">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="body" type="TEXT"/>
+
+            <column name="contact_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_note_contact"
+                             referencedTableName="contact" referencedColumnNames="id"/>
+            </column>
+            <column name="created_at" type="timestamp"/>
+            <column name="updated_at" type="timestamp"/>
+            <column name="created_by" type="varchar(100)"/>
+            <column name="deleted_by" type="varchar(100)"/>
+            <column name="is_deleted" type="varchar(1)" defaultValue="N"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
