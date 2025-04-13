@@ -79,7 +79,7 @@ mvn spring-boot:run
 ```
 
 App runs by default at:  
-📍 `http://localhost:8080`
+`http://localhost:8080`
 
 If needed change port number as well in `application.properties` file
 
@@ -109,9 +109,10 @@ src/
 ├── entity
 ├── dto
 ├── service
+├── exception
 ├── repository
 ├── config
 ├── security
-├── events
+├── event
 └── util
 ```
