@@ -43,7 +43,7 @@ cd contact-notes-system
 CREATE DATABASE contact_notes;
 ```
 
-2. **Update the `application.properties` file:
+2. **Update the** `application.properties` file:
 
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/created_db_name
