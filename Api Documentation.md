@@ -1,4 +1,3 @@
-Here’s a structured breakdown for your documentation, covering:
 
 ---
 
@@ -32,7 +31,6 @@ Here’s a structured breakdown for your documentation, covering:
 
 - A user should only see/edit their own contacts and notes.
 - JWT token provides valid and accurate username in `subject`.
-- RabbitMQ or downstream analytics processing is **eventually consistent** and **non-blocking**.
 - Soft delete is preferred over hard delete for traceability.
 
 ---
@@ -48,11 +46,13 @@ Here’s a structured breakdown for your documentation, covering:
 |------|--------------------------------------------------------------------------------------------------------------------------------------|
 | **Security** | Implementation of role-based access (Admin/User), token expiry refresh handling, brute-force prevention.                             |
 | **Testing** | Add end-to-end tests using Testcontainers (for MySQL).As of now the code coverage is 38%, if possible should increase code coverage. |
-| **Monitoring** | Integration of Splunk used for logging and monitor the health of endpoints.                                                          |                                                                                 |
+| **Monitoring** | Integration of Splunk used for logging and monitor the health of endpoints.                                                          |
 | **Frontend** | Build a Angular interface to manage contacts and notes visually.                                                                     |
 | **Search** | Able to implement the filter like full-text search for notes using ElasticSearch or native MySQL FT index.                           |
 | **Pagination** | Introducing paging and sorting for contacts and notes list endpoints.                                                                |
 | **Retry Handling** | Event handling by implmeneting the Retry handling so that we can able to retry the event once it is failed.                          |
+| **Analytics** | Implementing the analytics api so that we can visually view the events in a table. And if possible would have implmeneted in RabbitMQ.|          
+| **Docker** | Instead of using MySQL locally should have used docker image so that within the application itself we can integrate the db.                        |
 
 ---
 
