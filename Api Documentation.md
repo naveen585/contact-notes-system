@@ -71,6 +71,7 @@ Instructions to use the endpoints:
   Returns success message or error if user exists.
 
 ![Screenshot (567)](https://github.com/user-attachments/assets/002dc848-990b-4cea-8679-b4800830ca50)
+![Screenshot (568)](https://github.com/user-attachments/assets/c0a4f7eb-982d-4133-bb33-162a6471da31)
 
 ---
 
@@ -89,12 +90,13 @@ Instructions to use the endpoints:
 ```
   "token": "eyJhbGciOiJIUzI1NiIsInR..."
 ```
+![Screenshot (569)](https://github.com/user-attachments/assets/1cf6e8b8-9050-4609-901a-1d1d11c35bd1)
 
 ---
 
 ### Contacts
 
-#### `GET /api/contacts`
+#### `GET /api/contacts/`
 - **Headers**: `Authorization: Bearer <JWT>`
 - **Response**: `200 OK`
 ```json
@@ -110,10 +112,12 @@ Instructions to use the endpoints:
   }
 ]
 ```
+![Screenshot (571)](https://github.com/user-attachments/assets/a12bcf67-1919-4866-af79-b22bc2939fab)
+![Screenshot (577)](https://github.com/user-attachments/assets/95f82534-4233-4c36-8549-faaa28952a90)
 
 ---
 
-#### `POST /api/contacts`
+#### `POST /api/contacts/`
 
 - **Headers**: `Authorization: Bearer <JWT>`
 - **Request Body**
@@ -128,6 +132,7 @@ Instructions to use the endpoints:
 
 - **Response**: `201 Created`  
   Returns the saved contact.
+![Screenshot (570)](https://github.com/user-attachments/assets/f4e4bf42-eda0-420d-86c1-b970a50c303f)
 
 ---
 
@@ -144,6 +149,7 @@ Pass the value in path param id: 1
 }
 ```
 - **Response**: `202 Accepted`
+![Screenshot (573)](https://github.com/user-attachments/assets/ee747e89-a380-4e42-a221-d2d74453b719)
 
 ---
 
@@ -152,12 +158,13 @@ Pass the value in path param id: 1
 - Performs soft delete.
 - **Headers**: `Authorization: Bearer <JWT>`
 - **Response**: `204 No Content`
+![Screenshot (580)](https://github.com/user-attachments/assets/ef01c9df-f7a1-49ea-82c2-786428665543)
 
 ---
 
 ### Notes
 
-#### `GET /api/contacts/{id}/notes`
+#### `GET /api/notes/contact/{contactId}`
 Pass the value in path param id: 1
 
 - Fetch all notes for a contact.
@@ -173,10 +180,12 @@ Pass the value in path param id: 1
   }
 ]
 ```
+![Screenshot (574)](https://github.com/user-attachments/assets/796c65c1-ead4-443c-825e-5317e649c863)
+![Screenshot (576)](https://github.com/user-attachments/assets/dcf898a3-e7ba-497b-a9d7-b669b68a78f9)
 
 ---
 
-#### `POST /api/notes`
+#### `POST /api/notes/`
 
 - **Request Body**
 - **Headers**: `Authorization: Bearer <JWT>`
@@ -195,6 +204,9 @@ Pass the value in path param id: 1
   "body": "Met with client. Follow-up in 2 weeks."
 }
 ```
+![Screenshot (575)](https://github.com/user-attachments/assets/9f64057e-b115-4dde-ba24-3490a2ac33e3)
+
+
 
 ---
 
@@ -211,6 +223,7 @@ Pass the value in path param noteId: 15
 ```
 
 - **Response**: `202 Accepted`
+![Screenshot (578)](https://github.com/user-attachments/assets/ec56b38e-08d4-41ab-9986-0d768a535499)
 
 ---
 
@@ -219,5 +232,9 @@ Pass the value in path param noteId: 15
 - Performs soft delete.
 - **Headers**: `Authorization: Bearer <JWT>`
 - **Response**: `204 No Content`
+![Screenshot (579)](https://github.com/user-attachments/assets/2dad23a8-d244-4b67-807c-56332e644bbc)
 
 ---
+
+#### Database view:
+![Screenshot (581)](https://github.com/user-attachments/assets/6f006681-ea6a-42be-8ec6-b8dae72c7f90)
